@@ -1,0 +1,109 @@
+/* ----------- Blog List ----------- */
+#content > h1{
+    margin-bottom: 20px;
+    margin-top: 10px;;
+}
+#blogList{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.blogItem{
+    border: 1px solid rgb(136, 174, 187);
+    padding: 8px;
+    box-shadow: 1px 2px rgb(136, 174, 187);
+}
+.blogItem:not(:last-child){
+    margin-bottom: 10px;
+}
+.blogName{
+    text-align: center;
+    display: block;
+    padding: 8px;
+    background-color: rgb(136, 174, 187);
+}
+.blogDescription{
+    border: 1px solid rgb(136, 174, 187);
+    box-shadow: -1px -2px rgb(136, 174, 187);
+    padding: 8px;
+    width: 60%;
+    margin: 10px auto;
+}
+/* --------------------------------- */
+
+/* ----------- Blog Entry ---------- */
+.entryDiv{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border: 3px solid rgb(136, 174, 187);
+    box-shadow: 1px 2px rgb(136, 174, 187);
+}
+.entryDiv:not(:last-child){
+    margin-bottom: 10px;
+}
+.entryDiv > * {
+    margin-bottom: 10px;
+}
+.entryDate{
+    margin: 0;
+    padding: 8px;
+    display: inline-block;
+    border: 1px solid rgb(136, 174, 187);
+    box-shadow: -1px -2px rgb(136, 174, 187);
+    background-color: rgb(155, 216, 203);
+}
+.entryContent{
+    box-shadow: -1px -2px rgb(136, 174, 187);
+    border: 1px solid rgb(136, 174, 187);
+    padding: 8px;
+    background-color: rgb(155, 216, 203);
+}
+.entryDiv > a.attachment{
+    padding-left: 20px;
+}
+    /* --------- Blog Comments -------- */
+.commentsSectionDiv{
+    border: 1px solid rgb(136, 174, 187);
+    box-shadow: -1px -2px rgb(136, 174, 187);
+    box-sizing: border-box;
+    padding: 8px;
+    overflow: hidden;
+    max-height: 0px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.toggleCommentsSection:checked + .commentsSectionDiv{
+    max-height: 1000px;
+    overflow-y: scroll;
+}
+.commentDiv{
+    border: 1px solid rgb(136, 174, 187);
+    background-color: rgb(155, 216, 203);
+    box-shadow: 1px 2px rgb(136, 174, 187);
+    padding: 8px;
+    width: 80%;
+    margin: 0 auto;
+    overflow: scroll;
+}
+.commentDiv:not(:last-child){
+    margin-bottom: 10px;
+}
+.authorNick{
+    font-style: italic;
+}
+[type]::after{
+    content: attr(type);
+}
+[type="Pozytywny"]{
+    color: green;
+}
+[type="Neutralny"]{
+    color: grey;
+}
+[type="Negatywny"]{
+    color: red;
+}
+    /* ----------------------------- */
+/* --------------------------------- */
